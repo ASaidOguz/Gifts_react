@@ -18,12 +18,11 @@ app.post('/gift', async(req, res) => {
  
   const isInTheList = await verifyProof(proof,name,MERKLE_ROOT);
   console.log("Verif proof:",isInTheList)
-  if(isInTheList) {
-    res.send("You got a toy robot!");
-  }
-  else {
-    res.send("You are not on the list :(");
-  }
+ 
+    res.send(isInTheList);
+ 
+   
+  
 });
 app.get('/gift-list',(req,res)=>{
     const List=JSON.stringify(niceList)

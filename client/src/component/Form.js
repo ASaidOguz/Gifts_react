@@ -26,12 +26,8 @@ export function Form({name,setName,gift,setGift}){
             });
             
             console.log("Gift:",giftsend)
-            //setGift(giftsend)
-            if(giftsend==="You got a toy robot!"){
-              setGift(true)
-            }else{
-              setGift(false)
-            }
+            setGift(giftsend)
+          
             
     }
     
